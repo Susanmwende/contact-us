@@ -1,101 +1,62 @@
-import Image from "next/image";
-
-export default function Home() {
+const Contact = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <section id="contact" className="h-screen bg-[#0D1730] text-white flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 lg:px-36 galaxy-fold:px-2">
+      <h2 className="font-bold text-3xl sm:text-4xl mb-2 sm:mb-4 text-center galaxy-fold:text-2xl galaxy-fold:mb-2" style={{ fontFamily: 'Darker Grotesque' }}>
+        Contact Us
+      </h2>
+      <div className="flex flex-col sm:flex-row w-full max-w-5xl mx-auto" style={{ fontFamily: 'Darker Grotesque' }}>
+        <div className="flex flex-col justify-center p-4 sm:p-5 w-full sm:w-1/2 mb-2 sm:mb-0 galaxy-fold:mb-2">
+          <div className="mb-3 sm:mb-4">
+            <strong>Email:</strong> taji@gmail.com
+          </div>
+          <div className="mb-3 sm:mb-4">
+            <strong>Phone Number:</strong> +254794847640
+          </div>
+          <div className="mb-3 sm:mb-4">
+            <strong>Address:</strong> 616 Korongo RD, Nairobi
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="w-px bg-white mx-4 sm:mx-5 hidden sm:block"></div>
+        <form className="p-4 sm:p-5 rounded-lg shadow-lg w-full sm:w-1/2 flex flex-col items-center galaxy-fold:p-2">
+          <div className="mb-4 w-full flex flex-col sm:flex-row items-start">
+            <label htmlFor="email" className="block font-bold mr-0 sm:mr-2 w-full sm:w-1/3 mb-2 sm:mb-0">Email Address:</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              className="border border-gray-300 rounded px-3 py-2 w-full sm:w-2/3" 
+              required 
+            />
+          </div>
+          <div className="mb-4 w-full flex flex-col sm:flex-row items-start">
+            <label htmlFor="phone" className="block font-bold mr-0 sm:mr-2 w-full sm:w-1/3 mb-2 sm:mb-0">Phone Number:</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              className="border border-gray-300 rounded px-3 py-2 w-full sm:w-2/3" 
+              required 
+            />
+          </div>
+          <div className="mb-4 w-full flex flex-col sm:flex-row items-start">
+            <label htmlFor="message" className="block font-bold mr-0 sm:mr-2 w-full sm:w-1/3 mb-2 sm:mb-0">Message:</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4"  
+              className="border border-gray-300 rounded px-3 py-2 w-full sm:w-2/3 resize-none" 
+              required 
+            />
+          </div>
+          <button 
+            type="submit" 
+            className="bg-white text-[#0D1730] font-bold py-2 px-5 rounded-full cursor-pointer self-center hover:bg-blue-800" >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
   );
-}
+};
+
+export default Contact;
